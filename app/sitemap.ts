@@ -1,11 +1,8 @@
 import { MetadataRoute } from 'next'
-import { headers } from 'next/headers'
+export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const headersList = headers()
-  const host = headersList.get('x-forwarded-host') || 'neulipaz.com.br'
-  const protocol = headersList.get('x-forwarded-proto') || 'https'
-  const siteUrl = `${protocol}://${host}`
+  const siteUrl = 'https://neulipaz.com.br'
 
   return [
     {

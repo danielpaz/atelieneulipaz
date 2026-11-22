@@ -6,8 +6,6 @@ import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-export const dynamic = 'force-dynamic'
-
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
@@ -81,7 +79,7 @@ export const metadata: Metadata = {
     },
   },
   category: 'Arte e Restauração',
-  metadataBase: new URL(process.env.NEXTAUTH_URL ?? 'https://neulipaz.com.br'),
+  metadataBase: new URL('https://neulipaz.com.br'),
 }
 
 export default function RootLayout({
@@ -92,7 +90,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        <script src="https://apps.abacus.ai/chatllm/appllm-lib.js" />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <Script
