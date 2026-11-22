@@ -5,7 +5,7 @@ const nextConfig = {
   trailingSlash: false,
   env: {
     NEXT_PUBLIC_GA_MEASUREMENT_ID:
-      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-RXECPECSGN',
+      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-KYHKWWE8TQ',
   },
 }
 
